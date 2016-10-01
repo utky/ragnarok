@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>津島 善子</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id='app'>
+    <input v-model='query' v-on:keyup.enter='search' type='text'/>
+    <button type='reset'>reset</button>
+    <div>{{images}}</div>
+  </div>
+  <script src='/js/vue.min.js'></script>
+  <script src='/js/jquery-3.1.1.min.js'></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        query: "",
+        images: ""
+      },
+      methods: {
+        search: function () {
+          var text = this.query.trim();
+          $.ajax('/search', { data: {q: text} })
+            .done(function(res) {
+              console.log(res);
+              this.images = res;
+            });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
