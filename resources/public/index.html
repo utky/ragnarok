@@ -2,16 +2,39 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>津島 善子</title>
+<title>Ragnarok: The abyss for little daemons</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
+<link rel='stylesheet' href='/css/normalize.css'></link>
+<link rel='stylesheet' href='/css/skeleton.css'></link>
+<style type='text/css'>
+body {
+  background-image: url(/img/yohane-default.png);
+  background-position: 500px 80px;
+  background-repeat: no-repeat;
+}
+</style>
 <body>
+
   <div id='app'>
-    <input v-model='query' v-on:keyup.enter='search' type='text'/>
-    <button type='reset'>reset</button>
-    <div>{{images}}</div>
+    <div class='container'>
+      <div class='row'>
+        <div class='eight columns'>
+          <div>工事中</div>
+          <!--
+          <input style='width: 80%' v-model='query' v-on:keyup.enter='search' type='text'/>
+          <button type='reset'>reset</button>
+          -->
+        </div>
+        <div class='four columns'>
+              <a class="twitter-timeline"  href="https://twitter.com/hashtag/%E6%B4%A5%E5%B3%B6%E5%96%84%E5%AD%90" data-widget-id="782081319413043202">#津島善子 のツイート</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+    </div>
   </div>
+
+
   <script src='/js/vue.min.js'></script>
   <script src='/js/jquery-3.1.1.min.js'></script>
   <script>

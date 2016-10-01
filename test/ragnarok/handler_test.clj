@@ -1,7 +1,7 @@
-(ns yohane.handler-test
+(ns ragnarok.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [yohane.handler :refer :all]))
+            [ragnarok.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"
