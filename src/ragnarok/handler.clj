@@ -5,10 +5,10 @@
             [ring.util.response :as response]))
 
 (defroutes app-routes
-  (GET "/" []
+  (GET "/arcana/major" []
        (response/content-type
-         (response/resource-response "index.html" {:root "public"})
-         "text/html"))
+         (response/resource-response "index.html" {:root "data/tarot"})
+         "application/yaml"))
   (GET "/search" request
        (fn [request] 
          (let [q (get (:query-params request) "q")]
